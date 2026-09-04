@@ -1,0 +1,268 @@
+# Changelog
+
+## blob 1.3.0.9013 (2026-08-08)
+
+### Continuous integration
+
+- Wrap the commit status update into an action.
+
+- Route ccache through one-word compiler wrappers on Unix.
+
+- Name every step and restore the log entry `setup-pandoc` swallows.
+
+## blob 1.3.0.9012 (2026-08-06)
+
+### Continuous integration
+
+- Add sharded `revdep2` workflow.
+
+### Uncategorized
+
+- Ci: Harden `workflow_run` workflows against untrusted pull requests
+  ([\#106](https://github.com/tidyverse/blob/issues/106)).
+
+- Ci: Pin third-party actions to commits and let Renovate keep them
+  pinned ([\#105](https://github.com/tidyverse/blob/issues/105)).
+
+## blob 1.3.0.9011 (2026-08-05)
+
+### Chore
+
+- Auto-update from GitHub Actions.
+
+  Run: <https://github.com/tidyverse/blob/actions/runs/30975085837>
+
+### Continuous integration
+
+- Remove unused pr-commands workflow.
+
+### Uncategorized
+
+- Ci: Give every workflow and job an explicit `permissions` block
+  ([\#103](https://github.com/tidyverse/blob/issues/103)).
+
+- Ci: Pass workflow context through the environment, not into script
+  text ([\#102](https://github.com/tidyverse/blob/issues/102)).
+
+- Ci: Add a Windows arm64 (`windows-11-arm`) check on R-release
+  ([\#99](https://github.com/tidyverse/blob/issues/99)).
+
+## blob 1.3.0.9010 (2026-07-28)
+
+- Ci: Run all smoke-test checks even when one fails
+  ([\#97](https://github.com/tidyverse/blob/issues/97)).
+
+- Ci: Apply matrix `env` vars in the workflow, not in custom actions
+  ([\#95](https://github.com/tidyverse/blob/issues/95)).
+
+- Ci: Link the responsible workflow run in snapshot update PRs
+  ([\#96](https://github.com/tidyverse/blob/issues/96)).
+
+## blob 1.3.0.9009 (2026-07-25)
+
+### Continuous integration
+
+- Lock down `format-suggest` egress (audit → block).
+
+## blob 1.3.0.9008 (2026-07-24)
+
+### Bug fixes
+
+#### ci
+
+- Emit empty package matrix when there are no (rev)deps.
+
+### Uncategorized
+
+- Ci: Harden `format-suggest` against `pull_request_target` pwn requests
+  ([\#93](https://github.com/tidyverse/blob/issues/93)).
+
+## blob 1.3.0.9007 (2026-07-22)
+
+### Continuous integration
+
+- Run on Ubuntu 26.04.
+
+- Align workflows with template.
+
+## blob 1.3.0.9006 (2026-05-24)
+
+### Continuous integration
+
+- Update ccache-action reference.
+
+- Bump action version.
+
+## blob 1.3.0.9005 (2026-05-16)
+
+- Ci: Unify fledge.yaml across cynkratemplate and fledge
+  ([\#86](https://github.com/tidyverse/blob/issues/86)).
+
+## blob 1.3.0.9004 (2026-05-13)
+
+### Chore
+
+- Add ccache to `.gitignore` and `.Rbuildignore`.
+
+### Continuous integration
+
+- Create snapshot update PR against correct branch.
+
+- Add reference to `/apply-patch` workflow in commit message.
+
+- Clarify rationale for not deploying on schedule.
+
+## blob 1.3.0.9003 (2026-05-10)
+
+### Continuous integration
+
+- Only run fledge on pushes to main.
+
+## blob 1.3.0.9002 (2026-05-10)
+
+### Continuous integration
+
+- Tweak fledge workflow and ccache action.
+
+## blob 1.3.0.9001 (2026-05-06)
+
+### Chore
+
+- Auto-update from GitHub Actions.
+
+  Run: <https://github.com/tidyverse/blob/actions/runs/25394358417>
+
+### Continuous integration
+
+- Cosmetics.
+
+- Bump action versions.
+
+- Install clang-format-21.
+
+- Align fledge workflow.
+
+- Harmonize.
+
+### Documentation
+
+- Update Plausible analytics snippet
+  ([@jeroenjanssens](https://github.com/jeroenjanssens),
+  [\#71](https://github.com/tidyverse/blob/issues/71)).
+
+## blob 1.3.0.9000 (2026-01-16)
+
+### fledge
+
+- CRAN release v1.3.0
+  ([\#70](https://github.com/tidyverse/blob/issues/70)).
+
+## blob 1.3.0 (2026-01-13)
+
+CRAN release: 2026-01-14
+
+### Testing
+
+- The upcoming vctrs update changes details on how subset assignment
+  with `NULL` works. This motivated the minor version bump
+  ([@DavisVaughan](https://github.com/DavisVaughan),
+  [\#65](https://github.com/tidyverse/blob/issues/65)).
+
+### Bug fixes
+
+- Fix argument consistency between S3 generics and methods.
+
+### Chore
+
+- Upkeep ([@MikeJohnPage](https://github.com/MikeJohnPage),
+  [\#55](https://github.com/tidyverse/blob/issues/55)).
+
+## blob 1.2.4 (2023-03-17)
+
+CRAN release: 2023-03-17
+
+### Bug fixes
+
+- Fix argument consistency between S3 generics and methods.
+
+## blob 1.2.3 (2022-04-10)
+
+CRAN release: 2022-04-10
+
+- `as_blob(NA_character_)` returns a missing `blob` instead of
+  `as_blob("NA")` ([\#26](https://github.com/tidyverse/blob/issues/26),
+  [@michaelchirico](https://github.com/michaelchirico)).
+
+## blob 1.2.2 (2021-07-23)
+
+CRAN release: 2021-07-23
+
+- Moved to “stable” lifecycle stage.
+- Remove `is_vector_s3()`
+  ([\#19](https://github.com/tidyverse/blob/issues/19)).
+
+## blob 1.2.1
+
+CRAN release: 2020-01-20
+
+- Inline prettyunits.
+- `vec_ptype2.hms.default()` forwards to `vec_default_ptype2()` for
+  compatibility with vctrs 0.2.1.
+
+## blob 1.2.0
+
+CRAN release: 2019-07-09
+
+### Breaking changes
+
+- The `blob` class is now based on `list_of(raw())` from the vctrs
+  package ([\#11](https://github.com/tidyverse/blob/issues/11)). This
+  adds support for `vec_cast()` and `vec_ptype2()`. Some operations
+  (such as subset assignment) are now stricter. The
+  [`new_blob()`](https://blob.tidyverse.org/dev/reference/blob.md)
+  constructor permits safe and fast construction of `blob` objects from
+  a list, and
+  [`validate_blob()`](https://blob.tidyverse.org/dev/reference/blob.md)
+  checks an existing object for conformity with the rules.
+
+- The new
+  [`is_blob()`](https://blob.tidyverse.org/dev/reference/blob.md)
+  deprecates the existing `is.blob()`.
+  [`as.blob()`](https://blob.tidyverse.org/dev/reference/as.blob.md) is
+  deprecated in favor of `vec_cast()` or the new
+  [`as_blob()`](https://blob.tidyverse.org/dev/reference/blob.md) (which
+  is just a thin wrapper around `vec_cast()`).
+
+- Indexing a vector of blobs out of bounds now raises an error. Use `NA`
+  as index to create a `NULL` blob.
+
+## blob 1.1.1 (2018-03-24)
+
+CRAN release: 2018-03-25
+
+- Now suggesting *pillar* instead of importing *tibble*, and using
+  colored formatting with the *prettyunits* package with `B` instead of
+  `b` as units ([\#7](https://github.com/tidyverse/blob/issues/7),
+  [\#9](https://github.com/tidyverse/blob/issues/9)).
+
+- The blob class can now be used for S4 dispatch.
+
+- Calling [`c()`](https://rdrr.io/r/base/c.html) on blob objects returns
+  a blob.
+
+## blob 1.1.0 (2017-06-17)
+
+CRAN release: 2017-06-17
+
+- New maintainer: Kirill Müller.
+
+- Added `as.blob.blob()`and `as.data.frame.blob()` methods
+  ([\#3](https://github.com/tidyverse/blob/issues/3)).
+
+- Size of very large blobs is displayed correctly.
+
+## blob 1.0.0
+
+CRAN release: 2016-12-28
+
+- Initial release.
